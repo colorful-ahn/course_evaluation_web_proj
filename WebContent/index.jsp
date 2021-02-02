@@ -15,8 +15,26 @@
 	<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar">
 		<span class="navbar-toggler-icon"></span>
 	</button>
+	<div id="navbar" class="collapse navbar-collapse">
+		<ul class="navbar-nav mr-auto">
+			<li class="nav-item active">
+			<a class="nav-link" href="index.jsp">메인</a>
+			</li>
+			
+			<li class="nav-item dropdown">
+			<a class="nav-link dropdown-toggle" id="navbardrop" data-toggle="dropdown">
+			회원 관리 
+			</a>
+			<div class="dropdown-menu">
+			<a class="dropdown-item" href="#">로그인</a>
+			<a class="dropdown-item" href="#">회원가입</a>
+			<a class="dropdown-item" href="#">로그아웃</a>
+			</div>
+			</li>
+		</ul>
+	</div>	
 	</nav>
-	<!-- jquery 추가하 -->
+
 	<script src="./js/jquery-3.5.1.min.js"></script>
 	<script src="./js/popper.js"></script>
 	<script src="./js/bootstrap.min.js"></script>
