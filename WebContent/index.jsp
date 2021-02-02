@@ -22,7 +22,7 @@
 			</li>
 			
 			<li class="nav-item dropdown">
-			<a class="nav-link dropdown-toggle" id="navbardrop" data-toggle="dropdown">
+			<a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
 			회원 관리 
 			</a>
 			<div class="dropdown-menu">
@@ -32,6 +32,10 @@
 			</div>
 			</li>
 		</ul>
+		<form class="form-inline my-2 my-lg-0">
+		<input class="form-control mr-sm-2" type="search" placeholder="내용을 입력해주세요." aria-label="search">
+		<button class="btn btn-outline-success my-2 my-sm-0" type="submit">검색</button>
+		</form>
 	</div>	
 	</nav>
 
