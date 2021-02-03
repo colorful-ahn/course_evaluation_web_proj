@@ -25,9 +25,9 @@
    					회원관리
   				</button>
   				<div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-    					<a class="dropdown-item" href="#">로그인</a>
-   						<a class="dropdown-item" href="#">회원가입</a>
-    					<a class="dropdown-item" href="#">로그아웃</a>
+    					<a class="dropdown-item" href="userLogin.jsp">로그인</a>
+   						<a class="dropdown-item" href="userSignup.jsp">회원가입</a>
+    					<a class="dropdown-item" href="userLogout">로그아웃</a>
   				</div>
 			</li>
 		</ul>
