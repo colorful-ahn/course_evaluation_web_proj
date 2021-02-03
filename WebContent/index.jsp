@@ -11,28 +11,25 @@
 </head>
 <body>
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
-		<a class="navbar-brand" href="index.jsp">강의평가 웹 사이트</a>
-		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbar">
+	<a class="navbar-brand" href="index.jsp">강의평가 웹 사이트</a>
+	<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar">
+    <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbar">
 		<ul class="navbar-nav mr-auto">
-
-		<li class="nav-item active">
-            <a class="nav-link" href="index.jsp">메인</a>
-          </li>
-
-		<li class="nav-item dropdown">
-		
-  			<button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-   				회원관리
-  			</button>
+			<li class="nav-item active">
+            	<a class="nav-link" href="index.jsp">메인</a>
+        	</li>
+			<li class="nav-item dropdown">
+  				<button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+   					회원관리
+  				</button>
   				<div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
     					<a class="dropdown-item" href="#">로그인</a>
    						<a class="dropdown-item" href="#">회원가입</a>
     					<a class="dropdown-item" href="#">로그아웃</a>
   				</div>
-		</li>
+			</li>
 		</ul>
 		<form action="./index.jsp" method="get" class="form-inline my-2 my-lg-0">
           <input type="text" name="search" class="form-control mr-sm-2" placeholder="내용을 입력하세요.">
@@ -54,6 +51,16 @@
 			<a class="btn btn-danger mx-1 mt-2" data-toggle="modal" href="#reportModal">신고</a>
 		</form>
 	</section>
+	
+	<div class="card bg-light mt-3">
+		<div class="card-header bg-light">
+			<div class="row">
+				<div class="col-8 text-left"></div>
+			</div>
+		</div>
+	
+	</div>
+	
 	<div class="modal fade" id="registerModal" tabindex="-1" role="dialog" aria-labelledby="modal" aria-hidden="true">
 		<div class="modal-dialog">
 			<div class="modal-content">
@@ -111,6 +118,100 @@
 									<option value="기타">기타</option>
 								</select>
 							</div>
+						</div>
+						<div class="form-group">
+							<label>제목</label>
+							<input type="text" name="evaluationTime" class="form-control" maxlength="30">
+						</div>
+						<div class="form-group">
+							<label>내용</label>
+							<textarea name="evaluationContent" class="form-control" maxlength="2048" style="height: 180px;"></textarea>
+						</div>
+						<div class="form-row">
+							<div class="form-group col-sm-3">
+								<label>종합</label>
+								<select name="totalScore" class="form-control">
+									<option value="5" selected>5</option>
+									<option value="4">4</option>
+									<option value="3">3</option>
+									<option value="2">2</option>
+									<option value="1">1</option>
+								</select>
+							</div>
+							<div class="form-group col-sm-3">
+								<label>난이도</label>
+								<select name="totalScore" class="form-control">
+									<option value="5" selected>5</option>
+									<option value="4">4</option>
+									<option value="3">3</option>
+									<option value="2">2</option>
+									<option value="1">1</option>
+								</select>
+							</div>
+							<div class="form-group col-sm-3">
+								<label>강의력</label>
+								<select name="totalScore" class="form-control">
+									<option value="5" selected>5</option>
+									<option value="4">4</option>
+									<option value="3">3</option>
+									<option value="2">2</option>
+									<option value="1">1</option>
+								</select>
+							</div>
+							<div class="form-group col-sm-3">
+								<label>성적</label>
+								<select name="totalScore" class="form-control">
+									<option value="5" selected>5</option>
+									<option value="4">4</option>
+									<option value="3">3</option>
+									<option value="2">2</option>
+									<option value="1">1</option>
+								</select>
+							</div>
+						</div>
+						<div class="modal-footer">
+							<button type="submit" class="btn btn-primary">등록</button>
+							<button type="button" class="btn btn-secondary" data-dismiss="modal">취소</button>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="modal fade" id="reportModal" tabindex="-1" role="dialog" aria-labelledby="modal" aria-hidden="true">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title" id="modal">신고하기</h5>
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+						<span aria-hidden="true">&times;</span>
+					</button>
+				</div>
+				<div class="modal-body">
+					<form action=".reportAction.jsp" method="post">
+						<div class="form-row">
+							<div class="form-group col-sm-12">
+								<label>사유 선택</label>
+								<select name="reportCategory" class="form-control">
+									<option value="부적절한 홍보 게시글" selected>부적절한 홍보 게시글</option>
+									<option value="음란성 또는 청소년에게 부적합한 내용">음란성 또는 청소년에게 부적합한 내용</option>
+									<option value="명예훼손/사생활 침해 및 저작권 침해 등">명예훼손/사생활 침해 및 저작권 침해 등</option>
+									<option value="기타">기타</option>
+								</select>
+							</div>
+						</div>
+						<div class="form-group">
+							<label>제목</label>
+							<input type="text" name="reportTitle" class="form-control" maxlength="30">
+						</div>
+						<div class="form-group">
+							<label>내용</label>
+							<textarea name="reportContent" class="form-control" maxlength="2048" style="height: 180px;"></textarea>
+						</div>
+						
+						<div class="modal-footer">
+							<button type="submit" class="btn btn-danger">신고하기</button>
+							<button type="button" class="btn btn-secondary" data-dismiss="modal">취소</button>
 						</div>
 					</form>
 				</div>
