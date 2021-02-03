@@ -55,7 +55,7 @@
 	
     
     <footer class="bg-dark mt-4 p-5 text-center" style="color: #FFFFFF;">
-    	Copyright &copy; 2021 An-LAB right
+    	Copyright &copy; 2021 Colorful.Co Rights Reserved
     </footer>
 
 	<script src="./js/jquery.min.js"></script>
