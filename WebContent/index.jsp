@@ -50,16 +50,100 @@
 			<a class="btn btn-primary mx-1 mt-2" data-toggle="modal" href="#registerModal">등록하기</a>
 			<a class="btn btn-danger mx-1 mt-2" data-toggle="modal" href="#reportModal">신고</a>
 		</form>
+		<div class="card bg-light mt-3">
+			<div class="card-header bg-light">
+				<div class="row">
+					<div class="col-8 text-left">애니 역사론&nbsp;<small>임준섭</small></div>
+					<div class="col-4 text-right">
+						<span style="color: red;">A</span>
+					</div>
+				</div>
+			</div>
+			<div class="card-body">
+				<h5 class="card-title">
+					최고입니당.&nbsp;<small>(2020년 여름학기)</small>
+				</h5>
+				<p class="card-text">교수가 로리콘이에요.</p>
+				<div class="row">
+					<div class="col-9 text-left">
+					 	난이도 : <span style="color:red;">A </span>
+					 	강의력 : <span style="color:red;">A </span>
+					 	성적 : <span style="color:red;">A </span>
+					 	<span style="color: green;">(추천: 15)</span>
+					</div>
+					<div class="col-3 text-right">
+						<a onclick="return confirm('추천하시겠습까?')" href="./likeAction.jsp?evaluationID=">추천</a>
+						<a onclick="return confirm('삭제하시겠습까?')" style="color:red;" href="./deleteAction.jsp?evaluationID=">삭제</a>
+					</div>
+				</div>
+			</div>
+		
+		</div>
+		
+		<div class="card bg-light mt-3">
+			<div class="card-header bg-light">
+				<div class="row">
+					<div class="col-8 text-left">컴퓨터구조론&nbsp;<small>안경록</small></div>
+					<div class="col-4 text-right">
+						<span style="color: red;">A</span>
+					</div>
+				</div>
+			</div>
+			<div class="card-body">
+				<h5 class="card-title">
+					최고입니당.&nbsp;<small>(2019년 여름학기)</small>
+				</h5>
+				<p class="card-text">교수님이 너무 잘가르쳐 주세요.</p>
+				<div class="row">
+					<div class="col-9 text-left">
+					 	난이도 : <span style="color:red;">A </span>
+					 	강의력 : <span style="color:red;">A </span>
+					 	성적 : <span style="color:red;">A </span>
+					 	<span style="color: green;">(추천: 15)</span>
+					</div>
+					<div class="col-3 text-right">
+						<a onclick="return confirm('추천하시겠습까?')" href="./likeAction.jsp?evaluationID=">추천</a>
+						<a onclick="return confirm('삭제하시겠습까?')" style="color:red;" href="./deleteAction.jsp?evaluationID=">삭제</a>
+					</div>
+				</div>
+			</div>
+		
+		</div>
+		
+		<div class="card bg-light mt-3">
+			<div class="card-header bg-light">
+				<div class="row">
+					<div class="col-8 text-left">고백학 개론&nbsp;<small>임준섭</small></div>
+					<div class="col-4 text-right">
+						<span style="color: red;">A</span>
+					</div>
+				</div>
+			</div>
+			<div class="card-body">
+				<h5 class="card-title">
+					최고입니당.&nbsp;<small>(2020년 여름학기)</small>
+				</h5>
+				<p class="card-text">교수가 찐따같아요;;</p>
+				<div class="row">
+					<div class="col-9 text-left">
+					 	난이도 : <span style="color:red;">A </span>
+					 	강의력 : <span style="color:red;">A </span>
+					 	성적 : <span style="color:red;">A </span>
+					 	<span style="color: green;">(추천: 15)</span>
+					</div>
+					<div class="col-3 text-right">
+						<a onclick="return confirm('추천하시겠습까?')" href="./likeAction.jsp?evaluationID=">추천</a>
+						<a onclick="return confirm('삭제하시겠습까?')" style="color:red;" href="./deleteAction.jsp?evaluationID=">삭제</a>
+					</div>
+				</div>
+			</div>
+		
+		</div>
+		
+		
 	</section>
 	
-	<div class="card bg-light mt-3">
-		<div class="card-header bg-light">
-			<div class="row">
-				<div class="col-8 text-left"></div>
-			</div>
-		</div>
 	
-	</div>
 	
 	<div class="modal fade" id="registerModal" tabindex="-1" role="dialog" aria-labelledby="modal" aria-hidden="true">
 		<div class="modal-dialog">
@@ -80,7 +164,7 @@
 							</div>
 							<div class="form-group col-sm-12">
 								<label>교수명</label>
-								<input type="text" name=professorName" class="form-control" maxlength="20">
+								<input type="text" name="professorName" class="form-control" maxlength="20">
 							</div>
 						</div>
 						<div class="form-row">
@@ -112,7 +196,7 @@
 							</div>
 							<div class="form-group col-sm-4">
 								<label>강의 구분</label>
-								<select name=LectureDivide" class="form-control">
+								<select name="LectureDivide" class="form-control">
 									<option value="전공" selected>전공</option>
 									<option value="교양">교양</option>
 									<option value="기타">기타</option>
@@ -140,7 +224,7 @@
 							</div>
 							<div class="form-group col-sm-3">
 								<label>난이도</label>
-								<select name="totalScore" class="form-control">
+								<select name="indegreeScore" class="form-control">
 									<option value="5" selected>5</option>
 									<option value="4">4</option>
 									<option value="3">3</option>
@@ -150,7 +234,7 @@
 							</div>
 							<div class="form-group col-sm-3">
 								<label>강의력</label>
-								<select name="totalScore" class="form-control">
+								<select name="lectureScore" class="form-control">
 									<option value="5" selected>5</option>
 									<option value="4">4</option>
 									<option value="3">3</option>
@@ -160,7 +244,7 @@
 							</div>
 							<div class="form-group col-sm-3">
 								<label>성적</label>
-								<select name="totalScore" class="form-control">
+								<select name="gradeScore" class="form-control">
 									<option value="5" selected>5</option>
 									<option value="4">4</option>
 									<option value="3">3</option>
@@ -218,7 +302,10 @@
 			</div>
 		</div>
 	</div>
-      
+    
+    <footer class="bg-dark mt-4 p-5 text-center" style="color: #FFFFFF;">
+    	Copyright &copy; 2021 An-LAB right
+    </footer>
 
 	<script src="./js/jquery.min.js"></script>
 	<script src="./js/popper.js"></script>
