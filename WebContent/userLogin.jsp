@@ -17,7 +17,7 @@
     </button>
     <div class="collapse navbar-collapse" id="navbar">
 		<ul class="navbar-nav mr-auto">
-			<li class="nav-item active">
+			<li class="nav-item">
             	<a class="nav-link" href="index.jsp">메인</a>
         	</li>
 			<li class="nav-item dropdown">
@@ -25,7 +25,7 @@
    					회원관리
   				</button>
   				<div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-    					<a class="dropdown-item" href="userLogin.jsp">로그인</a>
+    					<a class="dropdown-item active" href="userLogin.jsp">로그인</a>
    						<a class="dropdown-item" href="userSignup.jsp">회원가입</a>
     					<a class="dropdown-item" href="userLogout">로그아웃</a>
   				</div>
