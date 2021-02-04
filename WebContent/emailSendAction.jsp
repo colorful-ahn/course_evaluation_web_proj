@@ -75,7 +75,7 @@
 		script.println("</script>");
 		script.close();
 	}
-%> 
+%>
 <!doctype html>
 <html>
 <head>
@@ -86,6 +86,23 @@
 <link rel="stylesheet" href="./css/custom.css">
 </head>
 <body>
+<%
+	if(userID == null){
+		PrintWriter script = response.getWriter();
+		script.println("<script>");
+		script.println("alert('로그인을 해주세요.');");
+		script.println("location.href = 'userLogin.jsp'");
+		script.println("</script>");
+		script.close();
+	}
+	if(emailChecked == false){
+		PrintWriter script = response.getWriter();
+		script.println("<script>");
+		script.println("location.href = 'emailSendConfirm.jsp'");
+		script.println("</script>");
+		script.close();
+	}
+%>
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
 	<a class="navbar-brand" href="index.jsp">강의평가 웹 사이트</a>
 	<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar">
@@ -101,9 +118,18 @@
    					회원관리
   				</button>
   				<div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+ <%
+ 	if(userID==null){
+ %>
     					<a class="dropdown-item" href="userLogin.jsp">로그인</a>
    						<a class="dropdown-item" href="userSignup.jsp">회원가입</a>
-    					<a class="dropdown-item" href="userLogout">로그아웃</a>
+ <%
+ 	} else {
+ %>
+    					<a class="dropdown-item" href="userLogoutAction.jsp">로그아웃</a>
+ <%
+ 	}
+ %>
   				</div>
 			</li>
 		</ul>
@@ -112,7 +138,7 @@
           <button class="btn btn-outline-success my-2 my-sm-0" type="submit">검색</button>
         </form>
 	</div>
-</nav>  
+</nav> 
 	<section class="container mt-3" style="max-width: 560px;">
 		<div class="alert alert-success mt-4" role="alert">
 			이메일 주소 인증 메일이 전송되었습니다. 회원 가입 시 입력했던 이메일에 들어가셔서 인증해주세요.
