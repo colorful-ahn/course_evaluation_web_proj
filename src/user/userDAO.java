@@ -19,7 +19,7 @@ public class userDAO {
 			pstmt.setString(1, userID);
 			rs = pstmt.executeQuery();
 			if(rs.next()) {
-				if(rs.getString(1).contentEquals(userPassword)) {
+				if(rs.getString(1).equals(userPassword)) {
 					return 1;
 				}
 				else {

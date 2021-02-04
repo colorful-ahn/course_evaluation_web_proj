@@ -34,27 +34,26 @@
     <div class="collapse navbar-collapse" id="navbar">
 		<ul class="navbar-nav mr-auto">
 			<li class="nav-item active">
-            	<a class="nav-link" href="index.jsp">메인</a>
+            	<a class="nav-link mr-5" href="index.jsp">메인</a>
         	</li>
-			<li class="nav-item dropdown">
-  				<button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-   					회원관리
-  				</button>
-  				<div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
  <%
  	if(userID==null){
  %>
-    					<a class="dropdown-item" href="userLogin.jsp">로그인</a>
-   						<a class="dropdown-item" href="userSignup.jsp">회원가입</a>
+ 					<li class="nav-item active">
+    					<a class="nav-link" href="userLogin.jsp">로그인</a>
+   						<a class="nav-link" href="userSignup.jsp">회원가입</a>
+   					</li>
  <%
  	} else {
  %>
-    					<a class="dropdown-item" href="userLogoutAction.jsp">로그아웃</a>
+ 					<li class="row mr-3">
+ 						<label class="mt-auto"><%= userID %> 님</label>
+    					<a class="nav-link" href="userLogoutAction.jsp">로그아웃</a>
+    				</li>
  <%
  	}
  %>
-  				</div>
-			</li>
+  				
 		</ul>
 		<form action="./index.jsp" method="get" class="form-inline my-2 my-lg-0">
           <input type="text" name="search" class="form-control mr-sm-2" placeholder="내용을 입력하세요.">

@@ -1,6 +1,7 @@
 package evaluation;
 
 public class EvaluationDTO {
+	
 	int evaluationID;
 	String userID;
 	String lectureName;

@@ -28,34 +28,27 @@
 %>
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
 	<a class="navbar-brand" href="index.jsp">강의평가 웹 사이트</a>
-	<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar">
-    <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbar">
-		<ul class="navbar-nav mr-auto">
+    <div class="collapse navbar-collapse" id="bnavbar">
+		<div class="row mt-auto" id="bottomrow">
+			<ul class="nav navbar-nav mr-auto">
 			<li class="nav-item active">
             	<a class="nav-link" href="index.jsp">메인</a>
         	</li>
-			<li class="nav-item dropdown">
-  				<button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-   					회원관리
-  				</button>
-  				<div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
  <%
  	if(userID==null){
  %>
-    					<a class="dropdown-item" href="userLogin.jsp">로그인</a>
-   						<a class="dropdown-item" href="userSignup.jsp">회원가입</a>
+ 					<li><a href="userLogin.jsp">로그인</a></li>
+   					<li><a href="userSignup.jsp">회원가입</a></li>
  <%
  	} else {
  %>
-    					<a class="dropdown-item" href="userLogoutAction.jsp">로그아웃</a>
+ 					<li><label><%= userID %> 님</label></li>
+    					<li><a href="userLogoutAction.jsp">로그아웃</a></li>
  <%
  	}
  %>
-  				</div>
-			</li>
-		</ul>
+  			</ul>	
+		</div>
 		<form action="./index.jsp" method="get" class="form-inline my-2 my-lg-0">
           <input type="text" name="search" class="form-control mr-sm-2" placeholder="내용을 입력하세요.">
           <button class="btn btn-outline-success my-2 my-sm-0" type="submit">검색</button>
