@@ -17,42 +17,23 @@
 	if(session.getAttribute("userID")!=null){
 		userID = (String) session.getAttribute("userID");
 	}
-	if(userID != null){
-		PrintWriter script = response.getWriter();
-		script.println("<script>");
-		script.println("alert('로그인이 된 상태입니다.');");
-		script.println("location.href = 'index.jsp'");
-		script.println("</script>");
-		script.close();
-	}
 %>
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
 	<a class="navbar-brand" href="index.jsp">강의평가 웹 사이트</a>
     <div class="collapse navbar-collapse" id="bnavbar">
 		<div class="row mt-auto" id="bottomrow">
 			<ul class="nav navbar-nav mr-auto">
-			<li class="nav-item active">
-            	<a class="nav-link" href="index.jsp">메인</a>
-        	</li>
- <%
- 	if(userID==null){
- %>
- 					<li><a href="userLogin.jsp">로그인</a></li>
-   					<li><a href="userSignup.jsp">회원가입</a></li>
- <%
- 	} else {
- %>
- 					<li><label><%= userID %> 님</label></li>
-    					<li><a href="userLogoutAction.jsp">로그아웃</a></li>
- <%
- 	}
- %>
+			<li class="nav-item active"><a class="nav-link" href="#">메인</a></li>
+ 			<li class="nav-item active"><a class="nav-link" href="userLogin.jsp">로그인</a></li>
+   			<li class="nav-item active"><a class="nav-link" href="userSignup.jsp">회원가입</a></li>
   			</ul>	
 		</div>
+		<div class="row ml-auto">
 		<form action="./index.jsp" method="get" class="form-inline my-2 my-lg-0">
           <input type="text" name="search" class="form-control mr-sm-2" placeholder="내용을 입력하세요.">
           <button class="btn btn-outline-success my-2 my-sm-0" type="submit">검색</button>
         </form>
+        </div>
 	</div>
 </nav>  
 	<section class="container mt-3" style="max-width: 560px;">
