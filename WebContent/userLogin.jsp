@@ -22,18 +22,20 @@
 	<a class="navbar-brand" href="index.jsp">강의평가 웹 사이트</a>
     <div class="collapse navbar-collapse" id="bnavbar">
 		<div class="row mt-auto" id="bottomrow">
-			<ul class="nav navbar-nav mr-auto">
+			<ul class="nav navbar-nav mr-2">
 			<li class="nav-item active"><a class="nav-link" href="#">메인</a></li>
  			<li class="nav-item active"><a class="nav-link" href="userLogin.jsp">로그인</a></li>
    			<li class="nav-item active"><a class="nav-link" href="userSignup.jsp">회원가입</a></li>
   			</ul>	
 		</div>
-		<div class="row ml-auto">
+		
 		<form action="./index.jsp" method="get" class="form-inline my-2 my-lg-0">
-          <input type="text" name="search" class="form-control mr-sm-2" placeholder="내용을 입력하세요.">
-          <button class="btn btn-outline-success my-2 my-sm-0" type="submit">검색</button>
+			<div class="form-group row">
+          <div class="col-sm-7"><input type="text" name="search" class="form-control mr-sm-2" placeholder="내용을 입력하세요."></div>
+          <div class="col"><button class="btn btn-outline-success my-2 my-sm-0" type="submit">검색</button></div>
+          </div>
         </form>
-        </div>
+        
 	</div>
 </nav>  
 	<section class="container mt-3" style="max-width: 560px;">
